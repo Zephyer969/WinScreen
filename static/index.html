@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WinScreen · Windows 持久会话</title>
+  <link rel="stylesheet" href="/vendor/xterm.css"><link rel="stylesheet" href="/style.css">
+  <script defer src="/vendor/xterm.js"></script><script defer src="/vendor/addon-fit.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><span class="brand-icon">▥</span> WinScreen <span class="version">1.0</span></div>
+  <div class="side-section">WORKSPACE</div>
+  <button class="nav active" id="home">▣ <span>会话管理</span><span class="key">01</span></button>
+  <button class="nav" id="help">⌘ <span>命令速查</span></button>
+  <div class="side-note"><span class="green-dot"></span>后台独立运行<p>关闭此页面后，你的会话会继续。<br>随时重新进入，接着工作。</p></div>
+  <div class="server-info"><div class="side-section">CONNECTED TO</div><strong id="computer">Windows</strong><span id="runtime">本机服务 · 127.0.0.1</span></div>
+</aside>
+<main>
+  <header><div><div class="eyebrow">WINDOWS SESSION MANAGER</div><h1>让任务继续运行<span class="title-dot">.</span></h1><p>与 screen 一样，创建、分离，再重新进入你的终端。</p></div><button class="primary" id="new">＋ 新建会话</button></header>
+  <section class="stats"><article><span>运行中</span><strong id="running">0</strong><small><i class="green-dot"></i>独立后台会话</small></article><article><span>已完成</span><strong id="completed">0</strong><small>保留输出和执行记录</small></article><article><span>需要检查</span><strong id="failed">0</strong><small>失败、停止或意外退出</small></article><article class="shortcut-card"><span>终端也可以这样用</span><code>screen -S train</code><small><kbd>Ctrl</kbd> + <kbd>A</kbd> 然后 <kbd>D</kbd> 分离</small></article></section>
+  <section class="workspace">
+    <div class="sessions"><div class="section-title"><h2>会话列表</h2><span id="count">0</span></div><input type="search" id="search" placeholder="搜索会话名或 ID" aria-label="搜索会话"><div class="filters"><button class="selected" data-filter="all">全部</button><button data-filter="running">运行中</button><button data-filter="history">历史</button></div><div id="session-list"></div></div>
+    <div class="terminal-panel"><div class="terminal-head"><div><span id="status-dot" class="terminal-dot"></span><strong id="session-title">选择一个会话</strong><span id="session-status">等待连接</span></div><div class="terminal-actions"><button id="reconnect" disabled>进入</button><button id="detach" disabled>分离</button><button id="download" disabled>下载日志</button><button id="stop" class="danger" disabled>结束</button></div></div><div class="terminal-meta"><span id="session-cwd">工作目录将显示在这里</span><button id="copy" disabled>复制重跑命令</button></div><div id="terminal"></div><div id="empty"><div class="empty-icon">›_</div><h3>为你的下一次训练留一个终端</h3><p>创建命名会话，或者从左侧重新进入。</p><button id="empty-new">＋ 创建第一个会话</button></div><div class="terminal-footer"><span id="footer-status">终端支持交互输入、颜色和程序中断。</span><span>关闭面板 ≠ 结束会话</span></div></div>
+  </section>
+  <footer class="page-footer"><span id="storage">日志保存在当前 Windows 用户的 WinScreen 目录</span><span>本机面板 · 持久会话</span></footer>
+</main>
+<dialog id="create-dialog"><form id="create-form"><div class="dialog-head"><div><div class="eyebrow">NEW SESSION</div><h2>新建持久会话</h2></div><button type="button" id="close-dialog" class="icon-button" aria-label="关闭">×</button></div><label>会话名称<input name="name" required placeholder="例如 train-model" maxlength="64" pattern="[\w\-\.\u4e00-\u9fff]+"></label><label>工作目录<input name="cwd" required placeholder="C:\Work\project"></label><div class="two-columns"><label>终端程序<select name="shell"><option value="powershell">PowerShell</option><option value="cmd">CMD</option></select></label><label>启动方式<select name="mode"><option value="interactive">交互终端</option><option value="command">执行训练命令</option></select></label></div><label id="command-label" hidden>运行命令<textarea name="command" rows="3" placeholder="python -u train.py"></textarea></label><label>Python 环境路径 <small>可选</small><input name="env_python" placeholder="例如 C:\Miniconda3\envs\myenv\python.exe"></label><p class="form-note">留空时继承当前环境。交互模式下可以进入后执行 conda activate。</p><div class="dialog-footer"><span id="form-message"></span><button class="primary" id="create-submit">创建并进入 →</button></div></form></dialog>
+<dialog id="help-dialog"><div class="dialog-head"><h2>熟悉的 screen 命令</h2><button id="close-help" class="icon-button" aria-label="关闭">×</button></div><div class="command-table"><div><code>screen -S train</code><span>新建并进入</span></div><div><code>screen -ls</code><span>查看正在运行的会话</span></div><div><code>screen -r train</code><span>重新进入</span></div><div><code>screen -d -r train</code><span>分离其他客户端后重连</span></div><div><code>screen -dmS train python -u train.py</code><span>直接在后台运行</span></div><div><code>screen -S train -X quit</code><span>结束会话及子进程</span></div><div><code>screen --panel</code><span>打开本面板</span></div></div><p class="form-note">终端：Ctrl+A，然后 D 分离。支持常用会话命令；不实现 GNU screen 的多窗口和分屏。</p></dialog>
+<div id="toast" role="status"></div>
+</body></html>

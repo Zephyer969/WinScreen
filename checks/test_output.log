@@ -1,0 +1,60 @@
+test_16_positional_arguments_are_not_reparsed_by_cmd (test_regressions.ReleaseRegressions.test_16_positional_arguments_are_not_reparsed_by_cmd) ... ok
+test_17_non_object_json_has_controlled_error (test_regressions.ReleaseRegressions.test_17_non_object_json_has_controlled_error) ... ok
+test_18_non_ascii_credentials_are_rejected_not_crashed (test_regressions.ReleaseRegressions.test_18_non_ascii_credentials_are_rejected_not_crashed) ... ok
+test_19_corrupted_metadata_does_not_break_listing (test_regressions.ReleaseRegressions.test_19_corrupted_metadata_does_not_break_listing) ... ok
+test_20_closing_cmd_launcher_preserves_output (test_regressions.ReleaseRegressions.test_20_closing_cmd_launcher_preserves_output) ... ok
+test_21_non_interactive_creation_does_not_leave_worker (test_regressions.ReleaseRegressions.test_21_non_interactive_creation_does_not_leave_worker) ... ok
+test_22_concurrent_create_is_serialized (test_regressions.ReleaseRegressions.test_22_concurrent_create_is_serialized) ... ok
+test_23_download_log_and_archive_preserves_file (test_regressions.ReleaseRegressions.test_23_download_log_and_archive_preserves_file) ... ok
+test_24_rerun_retains_structured_arguments (test_regressions.ReleaseRegressions.test_24_rerun_retains_structured_arguments) ... ok
+test_25_invalid_worker_requests_and_bounds (test_regressions.ReleaseRegressions.test_25_invalid_worker_requests_and_bounds) ... ok
+test_26_failed_program_does_not_claim_running (test_regressions.ReleaseRegressions.test_26_failed_program_does_not_claim_running) ... ok
+test_27_corrupt_panel_record_is_ignored (test_regressions.ReleaseRegressions.test_27_corrupt_panel_record_is_ignored) ... ok
+test_01_powershell_success_and_failure (test_screen.ScreenTests.test_01_powershell_success_and_failure) ... ok
+test_02_cmd_and_positional_command (test_screen.ScreenTests.test_02_cmd_and_positional_command) ... ok
+test_03_interactive_input_and_duplicate (test_screen.ScreenTests.test_03_interactive_input_and_duplicate) ... ok
+test_04_parent_exit_does_not_kill_session (test_screen.ScreenTests.test_04_parent_exit_does_not_kill_session) ... ok
+test_05_stop_kills_grandchild_tree (test_screen.ScreenTests.test_05_stop_kills_grandchild_tree) ... ok
+test_06_identity_and_worker_auth (test_screen.ScreenTests.test_06_identity_and_worker_auth) ... ok
+test_07_panel_restart_preserves_session_and_auth (test_screen.ScreenTests.test_07_panel_restart_preserves_session_and_auth) ... ok
+test_08_background_option_variants (test_screen.ScreenTests.test_08_background_option_variants) ... ok
+test_09_terminal_attach_ctrl_a_d_and_resume (test_screen.ScreenTests.test_09_terminal_attach_ctrl_a_d_and_resume) ... ok
+test_10_spaces_unicode_working_directory (test_screen.ScreenTests.test_10_spaces_unicode_working_directory) ... ok
+test_11_breakaway_survives_parent_job_close (test_screen.ScreenTests.test_11_breakaway_survives_parent_job_close) ... ok
+test_12_blocked_parent_job_fails_explicitly (test_screen.ScreenTests.test_12_blocked_parent_job_fails_explicitly) ... ok
+test_13_late_enter_and_ctrl_c_interrupt (test_screen.ScreenTests.test_13_late_enter_and_ctrl_c_interrupt) ... ok
+test_14_browser_focus_report_does_not_corrupt_command (test_screen.ScreenTests.test_14_browser_focus_report_does_not_corrupt_command) ... ok
+test_15_native_launcher_preserves_stuff_carriage_return (test_screen.ScreenTests.test_15_native_launcher_preserves_stuff_carriage_return) ... ok
+test_ascii_has_key_down_and_up (test_units.InputUnits.test_ascii_has_key_down_and_up) ... ok
+test_ctrl_c_is_processed_etx (test_units.InputUnits.test_ctrl_c_is_processed_etx) ... ok
+test_enter_and_backspace (test_units.InputUnits.test_enter_and_backspace) ... ok
+test_existing_win32_records_not_reencoded (test_units.InputUnits.test_existing_win32_records_not_reencoded) ... ok
+test_navigation_keys (test_units.InputUnits.test_navigation_keys) ... ok
+test_non_ascii_token_is_false (test_units.InputUnits.test_non_ascii_token_is_false) ... ok
+test_protocol_sequences_are_not_keystrokes (test_units.InputUnits.test_protocol_sequences_are_not_keystrokes) ... ok
+test_unicode_surrogate_pair (test_units.InputUnits.test_unicode_surrogate_pair) ... ok
+test_changed_log_rejected (test_units.ReleaseGateUnits.test_changed_log_rejected) ... ok
+test_modified_inputs_rejected (test_units.ReleaseGateUnits.test_modified_inputs_rejected) ... ok
+test_release_allowlist_excludes_local_sessions (test_units.ReleaseGateUnits.test_release_allowlist_excludes_local_sessions) ... ok
+test_skipped_tests_rejected (test_units.ReleaseGateUnits.test_skipped_tests_rejected) ... ok
+test_unchanged_inputs_pass (test_units.ReleaseGateUnits.test_unchanged_inputs_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 50.618s
+
+OK
+
+WinScreen 面板已启动： http://127.0.0.1:65140
+关闭浏览器不会终止会话。
+WinScreen 面板已启动： http://127.0.0.1:65140
+关闭浏览器不会终止会话。
+WinScreen 面板已启动： http://127.0.0.1:65140
+关闭浏览器不会终止会话。
+WinScreen 面板已启动： http://127.0.0.1:65140
+关闭浏览器不会终止会话。
+WinScreen 面板已启动： http://127.0.0.1:65140
+关闭浏览器不会终止会话。
+WinScreen 面板已启动： http://127.0.0.1:52720
+关闭浏览器不会终止会话。
+WinScreen 面板已启动： http://127.0.0.1:55729
+关闭浏览器不会终止会话。

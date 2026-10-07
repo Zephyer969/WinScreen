@@ -1,0 +1,29 @@
+name: Bug report
+description: 报告可复现问题（不要包含密码、令牌或私钥）
+title: '[Bug] '
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: WinScreen / Windows / Python 版本，启动方式是桌面、CLI 还是 SSH。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 使用虚构数据描述最少复现命令。
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为与预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 脱敏后的错误或测试输出
+      description: 不要粘贴 session.json、panel.json、密码、token 或私钥。

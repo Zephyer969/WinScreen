@@ -1,0 +1,55 @@
+{
+  "project": "WinScreen",
+  "version": "1.0.1",
+  "date": "2026-10-07",
+  "timezone": "Asia/Shanghai",
+  "license": "MIT",
+  "automated_tests": {
+    "passed": true,
+    "count": 40,
+    "skipped": 0,
+    "source_and_log_hashes": "verification.json"
+  },
+  "additional_checks": {
+    "python_compile": true,
+    "javascript_syntax": true,
+    "pip_check": true,
+    "release_allowlist_secret_scan_no_matches": true
+  },
+  "fresh_install": {
+    "passed": true,
+    "isolated_runtime": true,
+    "unicode_and_spaces_path": true,
+    "native_launcher": true,
+    "real_command_completed_exit_zero": true,
+    "saved_output_verified": true,
+    "no_path_mode_user_path_unchanged": true
+  },
+  "browser_ui": {
+    "passed": true,
+    "correct_version": true,
+    "completed_session_output_visible": true,
+    "completed_session_action_states": true,
+    "help_dialog": true,
+    "command_mode_form": true,
+    "required_field_validation": true,
+    "search_and_empty_result": true,
+    "captured_console_errors_or_warnings": 0,
+    "scope": "Visual and form checks; command and input behavior are covered by automated Windows tests."
+  },
+  "dependency_advisory_snapshot": {
+    "source": "https://api.osv.dev/v1/querybatch",
+    "date": "2026-10-07",
+    "packages": ["PyPI:pywinpty@2.0.15", "npm:@xterm/xterm@5.5.0", "npm:@xterm/addon-fit@0.10.0"],
+    "matched_advisories": 0,
+    "limitation": "No matching advisory returned at query time; not proof of zero vulnerabilities."
+  },
+  "public_archive_policy": "Only allowlisted source, documentation, vendored assets and sanitized checks; no runtime, sessions, tokens, private screenshots or personal server configuration.",
+  "github_ci": "See live repository Actions; do not infer remote CI success from these local results.",
+  "unverified": [
+    "Live remote Windows SSH disconnection",
+    "GPU training and long-duration production workloads",
+    "All Windows/Python versions",
+    "Independent security penetration test"
+  ]
+}
