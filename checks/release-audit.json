@@ -45,7 +45,18 @@
     "limitation": "No matching advisory returned at query time; not proof of zero vulnerabilities."
   },
   "public_archive_policy": "Only allowlisted source, documentation, vendored assets and sanitized checks; no runtime, sessions, tokens, private screenshots or personal server configuration.",
-  "github_ci": "See live repository Actions; do not infer remote CI success from these local results.",
+  "github_ci": {
+    "status": "success",
+    "run_id": 37642925150,
+    "url": "https://github.com/Zephyer969/WinScreen/actions/runs/37642925150",
+    "verified_implementation_commit": "2c9b0e1341a95b190ef2cab5067efde6ee05facd",
+    "platform": "Windows Server 2025",
+    "python_versions": ["3.11.9", "3.13.15"],
+    "tests_per_job": 42,
+    "skipped_per_job": 0,
+    "install_dependency_syntax_test_package_steps": "success",
+    "scope": "Actual completed workflow and job logs; later audit-document edits do not change the verified implementation."
+  },
   "unverified": [
     "Live remote Windows SSH disconnection",
     "GPU training and long-duration production workloads",
