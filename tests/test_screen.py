@@ -231,7 +231,9 @@ class ScreenTests(unittest.TestCase):
         work.mkdir(exist_ok=True)
         meta = screen.create('中文会话', cwd=str(work), command="Write-Output (Get-Location).Path")
         self.stopped(meta['id'])
-        self.assertIn(str(work), self.log(meta['id']))
+        # Windows CI TEMP may use RUNNER~1 (8.3); PowerShell returns its full
+        # name. Compare the canonical path, not two spellings of the same path.
+        self.assertIn(str(work.resolve()).casefold(), self.log(meta['id']).casefold())
 
     def test_11_breakaway_survives_parent_job_close(self):
         code = ("import screen,winprocess,ctypes,time; "

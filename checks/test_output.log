@@ -38,23 +38,25 @@ test_modified_inputs_rejected (test_units.ReleaseGateUnits.test_modified_inputs_
 test_release_allowlist_excludes_local_sessions (test_units.ReleaseGateUnits.test_release_allowlist_excludes_local_sessions) ... ok
 test_skipped_tests_rejected (test_units.ReleaseGateUnits.test_skipped_tests_rejected) ... ok
 test_unchanged_inputs_pass (test_units.ReleaseGateUnits.test_unchanged_inputs_pass) ... ok
+test_cp1252_redirected_output_preserves_unicode (test_units.VerificationConsoleUnits.test_cp1252_redirected_output_preserves_unicode) ... ok
+test_in_memory_streams_are_supported (test_units.VerificationConsoleUnits.test_in_memory_streams_are_supported) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 50.618s
+Ran 42 tests in 50.936s
 
 OK
 
-WinScreen 面板已启动： http://127.0.0.1:65140
+WinScreen 面板已启动： http://127.0.0.1:55733
 关闭浏览器不会终止会话。
-WinScreen 面板已启动： http://127.0.0.1:65140
+WinScreen 面板已启动： http://127.0.0.1:55733
 关闭浏览器不会终止会话。
-WinScreen 面板已启动： http://127.0.0.1:65140
+WinScreen 面板已启动： http://127.0.0.1:55733
 关闭浏览器不会终止会话。
-WinScreen 面板已启动： http://127.0.0.1:65140
+WinScreen 面板已启动： http://127.0.0.1:55733
 关闭浏览器不会终止会话。
-WinScreen 面板已启动： http://127.0.0.1:65140
+WinScreen 面板已启动： http://127.0.0.1:55733
 关闭浏览器不会终止会话。
-WinScreen 面板已启动： http://127.0.0.1:52720
+WinScreen 面板已启动： http://127.0.0.1:56067
 关闭浏览器不会终止会话。
-WinScreen 面板已启动： http://127.0.0.1:55729
+WinScreen 面板已启动： http://127.0.0.1:62908
 关闭浏览器不会终止会话。

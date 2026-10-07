@@ -1,14 +1,14 @@
 {
   "version": "1.0.1",
-  "started": "2026-10-07T22:52:32.705403+08:00",
-  "ended": "2026-10-07T22:53:23.635938+08:00",
+  "started": "2026-10-07T23:09:43.752693+08:00",
+  "ended": "2026-10-07T23:10:35.175736+08:00",
   "timezone": "Asia/Shanghai",
   "platform": "Windows-11-10.0.26300-SP0",
   "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
   "pywinpty": "2.0.15",
   "command": "python -m unittest discover -s tests -v",
   "returncode": 0,
-  "test_count": 40,
+  "test_count": 42,
   "skipped_count": 0,
   "passed": true,
   "implementation_unchanged": true,
@@ -33,11 +33,11 @@
     "static/vendor/xterm.js": "1f991ac3b4b283ebf96e60ae23a00a52765dd3a2e46fa6fdda9f1aab032f7495",
     "terminal_input.py": "11450863ccf71d4827ff2c5f640d9e6c88003976f2cc7f28fa8332a3d2fddffe",
     "tests/test_regressions.py": "bdd08c4a2c849983c3ae8511c197128e6a45a661d5b0d6fc309bb61994526cdf",
-    "tests/test_screen.py": "357aac602221e8c14d5c1344a77530e42921c774e926aebf7925702c9a73b45d",
-    "tests/test_units.py": "a1e6607b3d07eed40c0cf27aa24bfcc0a83b0db64c188fd81448562f2f770156",
-    "verify.py": "0bb71f46ef41a25262dfb72f534db4cfec871f5fee5bccd04412c6f2e5832d82",
+    "tests/test_screen.py": "be3849ffeab1108f528b6b21f059c938f5bc0881d9954106ac21332c24e1408c",
+    "tests/test_units.py": "701ee12d77ef99c16cca761f86c8ab91477037e99ea7b01d442dd16febee1ca5",
+    "verify.py": "f3e6fc088842161afa6b73ea0bcf7a9732b1ac2b72b7cf7be3399befadde9667",
     "winprocess.py": "c64b5b6f880db075ffd1a382767b09c6a3cd0f0860c6a4385896ba6ff248704f"
   },
-  "test_output_sha256": "c7f2e5875c7db66881b6b3671f6bd30aa9cd991c1e0ecc7a4b1d955fcef24f20",
+  "test_output_sha256": "f12d672c79e803c92383bc3bd0d33c6ba3012b8f5a53aa648ac04118c16215c7",
   "scope": "Local Windows integration/unit tests; no live remote SSH disconnect or GPU training test."
 }

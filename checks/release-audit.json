@@ -6,7 +6,7 @@
   "license": "MIT",
   "automated_tests": {
     "passed": true,
-    "count": 40,
+    "count": 42,
     "skipped": 0,
     "source_and_log_hashes": "verification.json"
   },

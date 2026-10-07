@@ -1,6 +1,9 @@
 """Platform-independent input and release-gate units, not live terminal evidence."""
 import hashlib
+import io
+import os
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -10,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import release
 import screen
+import verify
 from terminal_input import record, win32_input
 
 
@@ -41,6 +45,24 @@ class InputUnits(unittest.TestCase):
         self.assertFalse(screen.token_matches('中', 'expected'))
         self.assertFalse(screen.token_matches(None, 'expected'))
         self.assertTrue(screen.token_matches('expected', 'expected'))
+
+
+class VerificationConsoleUnits(unittest.TestCase):
+    def test_cp1252_redirected_output_preserves_unicode(self):
+        result = subprocess.run(
+            [sys.executable, '-c',
+             "import verify; verify.configure_console(); print('中文诊断', end='')"],
+            cwd=ROOT, capture_output=True, timeout=10,
+            env=dict(os.environ, PYTHONIOENCODING='cp1252', PYTHONUTF8='0'))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout, '中文诊断'.encode('utf-8'))
+
+    def test_in_memory_streams_are_supported(self):
+        output = io.StringIO()
+        with patch('sys.stdout', output), patch('sys.stderr', io.StringIO()):
+            verify.configure_console()
+            print('中文诊断')
+        self.assertEqual(output.getvalue(), '中文诊断\n')
 
 
 class ReleaseGateUnits(unittest.TestCase):

@@ -13,7 +13,17 @@ import sys
 from release import implementation_hashes, version
 
 
+def configure_console():
+    # English Windows runners default redirected stdout to cp1252. Preserve
+    # Unicode test diagnostics without hiding the real test failure.
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, 'reconfigure', None)
+        if reconfigure:
+            reconfigure(encoding='utf-8', errors='backslashreplace')
+
+
 def verify(root):
+    configure_console()
     zone = timezone(timedelta(hours=8))
     started = datetime.now(zone).isoformat()
     hashes_before = implementation_hashes(root)
